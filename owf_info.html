@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Offshore Windfarms Learning Area</title>
+		<link rel="stylesheet" href="./css/styles.css">
+	</head>
+	<body>
+	
+	<h2>Offshore Wind Farm Learning Area</h2>
+		
+	<img src="./graphics/scenarioThreeBasics.png" alt="" width=600 height=400 usemap="#map_example">
+
+	<input type="checkbox" id="s1" />
+	<label for="s1">Description of Graphic</label>
+	<div class="panel">
+		<p>Land-based wind farms have confirmed hacks by nation-state actors as far back as 2014 and as recently as May 2019. Offshore wind farms rely on the same information and operational technology which means we can expect them to be vulnerable to similar attacks.</p>
+
+		<p>Offshore windfarms (OWF) consist of multiple turbines all connected and communicating with each other. The protocols used to run the farm travel over wired connections that typically have no authentication, encryption or other security features. In other words, they pass around instructions that can be easily intercepted, manipulated or spoofed. There’s also wireless communications from the base of each tower to the power-generating components on top.</p>
+
+		<p>Underwater and underground cables carry the generated electric power back to shore, passing through an off-shore substation, an on-shore substation, and ultimately feeding into the grid. Operators at control centers monitor and control the production and flow of power by sending commands to the farm. And the farm communicates sensor data back to the center to help operators fine tune performance.  So there’s a two-way communication path between the farm and the control center.</p>
+
+		<p>The control center also is connected to GRID operators through either dedicated communication lines or public Internet... and grid operators communicate to the control center to help regulate the power flow. That’s another two-way communication path. And if that’s not enough, additional enterprise systems may connect to these centers via public Internet connections for receiving data and providing services.</p>
+	</div>
+
+	<input type="checkbox" id="s2" />
+	<label for="s2">Explore the Inside of a Wind Turbine</label>
+	<div class="panel">
+		<a href="./owflng/windturbineimagemap.html" target="_blank">Explore the Inside of a Wind Turbine</a>
+	</div>
+
+	<h3>Known Exploits on Onshore Wind Farms</h3>
+
+	<p>Currently, research has been unable to confirm any attacks on offshore wind farms. In the absense of contrary evidence, however, it must be presumed that offshore windfarms could fall victim to similar attacks.</p>
+
+
+	<input type="checkbox" id="s3" />
+	<label for="s3">Utility-Managed Wind Plant, June 2014</label>
+	<div class="panel">
+		<aside>
+				<nav>
+					<ul>
+						<li>Location: Undisclosed</li>
+						<li>Source: AP Investigation</li>
+						<li>Description: Hacker using "Tor" masking software to gain control over large wind farm</li>
+						<li>Vulnerability: Low security on wind plant network</li>
+						<li>Target: Wind plant</li>
+						<li>Attacker: Russian Cyber Threat Actors</li>
+						<li>Attack: Changed AVR from 'automatic' to 'manual'</li>
+						<li>Risk: Halting stable power generation</li>
+						<li>Impacts: Malicious access to wind control</li>
+						<li>Mitigations: Undisclosed</li>
+					</ul>
+				</nav>
+		</aside>
+	</div>
+
+	<input type="checkbox" id="s4" />
+	<label for="s4">University of Tulsa Researchers Hacked Into Wind Farms, 2017</label>
+	<div class="panel">
+	  <aside>
+				<nav>
+					<ul>
+						<li>Location: Undisclosed</li>
+						<li>Source: Wired</li>
+						<li>Description: Researchers discovered they could hack into wind farms with ease</li>
+						<li>Vulnerability: Unpatched Cisco Firewall</li>
+						<li>Target: Undisclosed location</li>
+						<li>Attacker: Jason Staggs and other researchers from the University of Tulsa</li>
+						<li>Attack: Exploits cybersecurity vulnerabilties to gain control of wind farm control network</li>
+						<li>Risk: Network Control Loss</li>
+						<li>Impacts: Damage to Wind Turbines</li>
+						<li>Mitigations: Strengthen Authentication Factors</li>
+					</ul>
+				</nav>
+		</aside>
+	</div>
+
+	<input type="checkbox" id="s5" />
+	<label for="s5">Dragos, September 2018</label>
+	<div class="panel">
+	  <aside>
+				<nav>
+					<ul>
+						<li>Location: Undisclosed</li>
+						<li>Source: Industrial Cybersecurity Company</li>
+						<li>Description: Noticed abnormal unapproved patching on wind plant network</li>
+						<li>Vulnerability: Low security on wind plant network</li>
+						<li>Target: Unknown wind plant</li>
+						<li>Attacker: Unknown</li>
+						<li>Attack: Cryptojacking attempt</li>
+						<li>Risk: Malware interfering with physical operations</li>
+						<li>Impacts: Slowing down wind plant network</li>
+						<li>Mitigations: Dragos intervention</li>
+					</ul>
+				</nav>
+		</aside>
+	</div>
+
+	<input type="checkbox" id="s6" />
+	<label for="s6">sPower, March 2019</label>
+	<div class="panel">
+	  <aside>
+				<nav>
+					<ul>
+						<li>Location: Utah</li>
+						<li>Source: Public Records</li>
+						<li>Description: First cyberattack on a low impact renewable energy source</li>
+						<li>Vulnerability: Unpatched Cisco Firewall</li>
+						<li>Target: sPower</li>
+						<li>Attacker: Unknown/ Accidental</li>
+						<li>Attack: Denial-of-Service/ Forced Reboots</li>
+						<li>Risk: Communication Loss</li>
+						<li>Impacts: Loss of System Integrity</li>
+						<li>Mitigations: Firmware Update</li>
+					</ul>
+				</nav>
+		</aside>
+	</div>
+
+
+	<div class="btn-group">
+		<button type="button" onclick="window.open('', '_self', ''); window.close();">CLOSE</button>
+	</div>
+		
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

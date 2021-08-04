@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OWF Vulnerabilities</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/styles.css">
+		
+		<h2>Vulnerabilities</h2>
+		<p></p>There is no zero cyber risk environment today, since new cyber threats and vulnerabilities are constantly emerging. 
+		Despite mitigations, vulnerabilities remain in people, processes and technologies, and attackers are constantly 
+		trying to find new ways to break through cyber defenses. Known vulnerabilities likely to be present in the IT/OT ecosystem 
+		involving OWF, maritime and critical infrastructure are summarized below.</p>
+</head>
+
+<body>
+<input type="checkbox" id="e0" />
+<label for="e0">Humans</label>
+<div class="panel">
+  <p>  Verizon's 2021 DBIR observes that social engineering and phishing attacks are widely used to steal credentials and spread 
+  malware. The majority of these incidents are discovered externally, meaning when targetted individuals fall for such ploys, they 
+  may not even realize they have been compromised.</p>
+  <p>Thus humans with physical or electronic access to any elements of an IT/OT ecosystem such as we find in OWFs remain among the 
+  most hackable elements. They can be cooerced or tricked into revealing credentials or injecting malware with immediate or 
+  longer-term side-effects.</p>
+</div>
+
+<input type="checkbox" id="e1" />
+<label for="e1">Onshore control center</label>
+<div class="panel">
+  <p>The control facilities for  OWF monitoring and operations are distant and centralized, enabling 
+  overarching setpoints and curtainments including shutdown. This means an attack on a single facility could move 
+  laterally to affect multiple geographically dispersed OWFs all controlled from that one facility, 
+  significantly disrupting power production.</p>
+  <p>Control center operators use market, weather and grid data to monitor and control OWFs. Spoofing this data 
+  could significantly destabilize and damage the plant. Due to the size of modern rotors and towers, if this 
+  progresses to a catastrophic physical failure, massive deadly spinning debris can be flung over thousands of 
+  square kilometers.</p>
+</div>
+
+<input type="checkbox" id="e2" />
+<label for="e2">Onshore substation</label>
+<div class="panel">
+  <p>Onshore substations transfer the electricity generated from the windfarms and offshore substations, to the grid. The vulnerabilities of the onshore substations are very similar to the vulnerabilities of the offshore ones. Besides just physical attacks, a cyber attack could be used to halt the transfer of the electricity to the grid to be used as power.
+</p>
+</div>
+
+<input type="checkbox" id="e3" />
+<label for="e3">Offshore substation</label>
+<div class="panel">
+  <p>Offshore substations are responsible for connecting to the wind farm by undersea cables and changing the voltage so that the electric power can transfer to the onshore substation. There can be physical attacks on this substation, but a cyber attack could block the substation from transfering the electric power and making the offshore wind farms useless.</p>
+</div>
+
+<input type="checkbox" id="e4" />
+<label for="e4">Undersea Cables</label>
+<div class="panel">
+  <p>Undersea cables are typically used to transport energy generated from wind turbines to onshore facilities like power stations or control centers. While undersea cables are generally not susceptible to cybersecurity attacks, they remain targets in physical attacks as they can be attacked in various ways, thus disrupting onshore operations and power transmissions to communities.</p>
+  <p>Physical attacks to undersea cables can come in the form of breakage, and this can be accomplished through the use of explosives or locating where the cables reach the surface of the water to damage it. Landing stations, which are onshore facilities where undersea cables come onshore, are known to be lightly protected, thus providing another method of physical attack. Undersea cables can be attacked non physically, and this can be done by “wire-tapping” which allows hackers to obtain data being transferred from the cable without physical penetration.</p>
+</div>
+
+<input type="checkbox" id="e5" />
+<label for="e5">Maritime vessels</label>
+<div class="panel">
+  <p>Aboard the maritime vessels, the Supervisory Control and Data Acquisition (SCADA) is used to monitor and control the ship or equipment. If the SCADA System were compromised, the vessel could be directed to collision with a wind turbine, physically destructing the structure and causing the Coast Guard to clean up debris. 
+</p>
+</div>
+
+<input type="checkbox" id="e6" />
+<label for="e6">Wind Turbines</label>
+<div class="panel">
+  <p>On the wind turbines themselves, each installation is unique; however the remote nature of the plants will generally use a fiber-optic Transmission Control Protocol/Internet Protocol (TCP/IP) network to communicate between the controllers to each plant. Most of the communication controls are designed to be fast speed with lightweight data exchanges and do not require authentication, encryption, and other security features, which therefore can be easily infiltrated through spoofing or cyber manipulation.</p>
+  <p>The turbines will also utilize CCTV Systems for physical security and maintenance monitoring.  The remote nature of these turbines will most likely lead to the use of IP based systems that will communicate with the Onshore Control Center. The cameras could be attacked by stopping or looping the feed which could allow a threat to physically breach the turbine without being noticed, and causing damage or injecting malware directly.</p>
+</div>
+
+<div class="btn-group">
+	<br>
+	<button type="button" onclick="window.open('', '_self', ''); window.close();">CLOSE</button>
+</div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+

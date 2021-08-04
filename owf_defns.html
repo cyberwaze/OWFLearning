@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OWF Acronyms+Definitions</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="./css/styles.css">
+	</head>
+
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openEntry(event, 'Acronyms')">Acronyms</button>
+  <button class="tablinks" onclick="openEntry(event, 'Definitions')">Definitions</button>
+</div>
+
+<div id="Acronyms" class="tabcontent">
+
+	<dl class="glossary1"> 
+	
+		<a name="AIS">
+		<dt>AIS</dt>
+		<dd>Automatic Identification System</dd>
+		
+		<a name="ATON">
+		<dt>ATON</dt>
+		<dd>Aid TO Navigation</dd>
+
+		<a name="CCTV">
+		<dt>CCTV</dt>
+		<dd>Closed Circuit Television</dd>
+	
+		<a name="CISA">
+		<dt>CISA</dt>
+		<dd>Cybersecurity and Infrastructure Security Agency</dd>
+		
+		<a name="CSRC">
+		<dt>CSRC</dt>
+		<dd>Computer Security Resource Center</dd>
+
+		<a name="DBIR">
+		<dt>DBIR</dt>
+		<dd>Data Breach Investigation Report</dd>
+	
+		<a name="DHS">
+		<dt>DHS</dt>
+		<dd>Department of Homeland Security</dd>
+
+		<a name="IP">
+		<dt>IP</dt>
+		<dd>Internet Protocol</dd>
+
+		<a name="NCCIC">
+		<dt>NCCIC</dt>
+		<dd>National Cybersecurity and Communications Intergration Center</dd>
+
+		<a name="ND">
+		<dt>ND</dt>
+		<dd>North Dakota State Government</dd>
+
+		<a name="NRMC">
+		<dt>NCCIC</dt>
+		<dd>National Rish Management Center</dd>
+		
+		<a name="OWF">
+		<dt>OWF</dt>
+		<dd>Offshore Windfarm</dd>
+
+		<a name="SCADA">
+		<dt>SCADA</dt>
+		<dd>Supervisory Control and Data Acquisition</dd>
+
+		<a name="TCP">
+		<dt>TCP</dt>
+		<dd>Transmission Control Protocol</dd>
+		
+	</dl>
+
+</div>
+
+<div id="Definitions" class="tabcontent">
+
+	<div id="quicklinks"></div>
+	 
+	<dl class="glossary"> 
+	
+		<a name="Attack">
+		<dt>Attack</dt>
+		<dd>An attempt to gain unauthorized access to system services, resources, or information, or an attempt to compromise system integrity (CISA).</dd>
+		
+		<a name="Cybersecurity">
+		<dt>Cybersecurity</dt>
+		<dd>The art of protecting networks, devices, and data from unauthorized access or criminal use and the practice of ensuring confidentiality, integrity, and availability of information. (CISA)</dd>
+
+		<a name="Encryption">
+		<dt>Encryption</dt>
+		<dd>Way to send message in code (CISA)</dd>
+
+		<a name="IT Systems">
+		<dt>IT Systems</dt>
+		<dd>Information Technology Systems, the use of hardware, software, services, and supporting infrastructure to manage and deliver information using voice, data, and video (ND)</dd>
+
+		<a name="OT Systems">
+		<dt>OT Systems</dt>
+		<dd>Operational Technology Systems, programmable systems or devices that interact with the physical environment (or manage devices that interact with the physical environment). These systems/devices detect or cause a direct change through the monitoring and/or control of devices, processes, and events (CSRC)</dd>
+
+		<a name="Malware">
+		<dt>Malware</dt>
+		<dd>Hardware, firmware, or software that is intentionally included or inserted in a system for a harmful purpose (CSRC)</dd>
+
+		<a name="Phishing">
+		<dt>Phishing</dt>
+		<dd>A technique for attempting to acquire sensitive data, such as bank account numbers, through a fraudulent solicitation in email or on a web site, in which the perpetrator masquerades as a legitimate business or reputable person (CSRC)</dd>
+
+		<a name="Risk">
+		<dt>Risk</dt>
+		<dd>The potential for an unwanted or adverse outcome resulting from an incident, as determined by the likelihood that a particular threat will exploit a particular vulnerability, with the associated consequences. (DHS)</dd>
+
+		<a name="Social Engineering">
+		<dt>Social Engineering</dt>
+		<dd>An attempt to trick someone into revealing information (e.g., a password) that can be used to attack systems or networks (CSRC)</dd>
+
+		<a name="Spoofing">
+		<dt>Spoofing</dt>
+		<dd>Faking the sending address of a transmission to gain illegal entry into a secure system (CSRC)</dd>
+		
+		<a name="Vulnerability">
+		<dt>Vulnerability</dt>
+		<dd>A characteristic or specific weakness that renders an organization or asset (such as information or an information system) open to exploitation by a given threat or susceptible to a given hazard. (DHS)</dd>
+		
+	</dl>
+
+</div>
+
+<div class="btn-group">
+	<br>
+	<button type="button" onclick="window.open('', '_self', ''); window.close();">CLOSE</button>
+</div>
+
+<!-- latest stable version of jQuery CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.js"
+	integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous">
+</script>
+		
+<script src="./js/scripts.js"></script>
+
+<script>
+	var terms = $("dl.glossary dt").sort();
+
+	var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	for (var i = 0; i < letters.length; i++) {
+		var nextChar = letters.charAt(i);
+
+		// Need to find first of each letter
+		var foundOne = -999;
+		for (var j = 0; j < terms.length; j++) {
+			var termj = terms[j].innerText;
+			var termJJ = termj.toUpperCase();
+			if (termJJ.charAt(0) == nextChar) {
+				foundOne = j;
+				break;
+			}
+		}
+
+		// Create links and anchors based on whether something was found
+		if (foundOne == -999) {
+
+			// Create a new letterLink (with class "entriesAbsent")
+			newLetterLink = "<span class=\"letterLinkSpan\"><a class=\"letterLink entriesAbsent\">" + nextChar + "</a></span>";
+
+		} 
+		else {
+
+			// Create a new letterLink (with class "entriesPresent")
+			newLetterLink = "<span class=\"letterLinkSpan\"><a class=\"letterLink entriesPresent\" href=\"#" + nextChar + "\">" + nextChar + "</a></span>";
+
+			// Create an anchor for the letterLink BEFORE the first glossary term starting with that letter
+			$("<a class=\"letterAnchor\" name=\"" + nextChar + "\">").insertBefore(terms[foundOne]);
+
+		}
+
+		// Either way, add the letterLink to the list of letterLinks
+			$("div#quicklinks").append(newLetterLink);
+			
+	}
+	</script>
+	
+</body>
+
+</html>
+   
+
+   
+
+
+
+
+
+
+
+
+
+
+
