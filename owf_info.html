@@ -13,13 +13,23 @@
 	<input type="checkbox" id="s1" />
 	<label for="s1">Description of Graphic</label>
 	<div class="panel">
-		<p>Land-based wind farms have confirmed hacks by nation-state actors as far back as 2014 and as recently as May 2019. Offshore wind farms rely on the same information and operational technology which means we can expect them to be vulnerable to similar attacks.</p>
+		<p>Offshore wind farms (OWF) consist of multiple turbines all connected and communicating with each other. The protocols used to run the turbines
+			within the farm itself travel over wired connections that typically have little to no authentication, encryption or other security 
+			features. In other words, they pass around instructions that can be easily intercepted, manipulated or spoofed. There also are wireless 
+			communications from the base of the towers to the power-generating components on top.</p>
 
-		<p>Offshore windfarms (OWF) consist of multiple turbines all connected and communicating with each other. The protocols used to run the farm travel over wired connections that typically have no authentication, encryption or other security features. In other words, they pass around instructions that can be easily intercepted, manipulated or spoofed. There’s also wireless communications from the base of each tower to the power-generating components on top.</p>
+		<p>Underwater and underground cables carry the generated electric power back to shore, passing through an offshore substation, an onshore substation, 
+			and ultimately feeding into the grid. Operators at control centers monitor and control the production and flow of power by sending commands 
+			to the farm. The farm communicates sensor data back to the center to help operators fine tune performance.  This creates a two-way 
+			wireless communication path between the farm and the control center.</p>
 
-		<p>Underwater and underground cables carry the generated electric power back to shore, passing through an off-shore substation, an on-shore substation, and ultimately feeding into the grid. Operators at control centers monitor and control the production and flow of power by sending commands to the farm. And the farm communicates sensor data back to the center to help operators fine tune performance.  So there’s a two-way communication path between the farm and the control center.</p>
-
-		<p>The control center also is connected to GRID operators through either dedicated communication lines or public Internet... and grid operators communicate to the control center to help regulate the power flow. That’s another two-way communication path. And if that’s not enough, additional enterprise systems may connect to these centers via public Internet connections for receiving data and providing services.</p>
+		<p>To help regulate  power flow, grid operators communicate with the farm's control center via  dedicated communication lines or the public Internet. 
+			Enterprise systems may connect to these centers via public Internet connections for receiving data and providing services. All these 
+			communication paths can be vulnerable to cybersecurity attacks.</p>
+	
+		<p>There are confirmed hacks on onshore wind farms attributed to nation-state actors as far back as 2014 and as recently as May 2019. 
+			Offshore wind farms rely on the same information and operational technology as onshore wind farms, which means we can expect 
+			them to be vulnerable to similar attacks.</p>
 	</div>
 
 	<input type="checkbox" id="s2" />
@@ -30,7 +40,8 @@
 
 	<h3>Known Exploits on Onshore Wind Farms</h3>
 
-	<p>Currently, research has been unable to confirm any attacks on offshore wind farms. In the absense of contrary evidence, however, it must be presumed that offshore windfarms could fall victim to similar attacks.</p>
+	<p>There have been NO confirmed attacks on offshore wind farms to date. In the absense of contrary evidence, however, it must be assumed that offshore wind farms remain 
+		vulnerable to attacks similar to those that have been successful against onshore wind farms.</p>
 
 
 	<input type="checkbox" id="s3" />
